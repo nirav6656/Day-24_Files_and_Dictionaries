@@ -16,5 +16,5 @@ with open("./Input/Names/invited_names.txt") as file:
 for j in name_list:
     file_path = f"./Output/ReadyToSend/invite_for_{j}".strip("\n") + ".txt"
     with open(file_path, mode="w") as file:
-        new_content = content.replace("[name]", j)
+        new_content = content.replace("[name]", j.strip("\n"))
         file.write(new_content)
